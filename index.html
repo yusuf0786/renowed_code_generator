@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="common_wrapper">
+
+        <form action="#">
+            <div class="form_group">
+                <label for="book_title">Image name with <b>.extention</b></label>
+                <div class="input">
+                    <input type="text" placeholder="e.g. image.png" name="image_name" id="image_name">
+                </div>
+            </div>
+
+            <div class="form_group">
+                <label for="book_title">Waqiya Title / Heading</label>
+                <div class="input">
+                    <input type="text" name="book_title" id="book_title">
+                </div>
+            </div>
+    
+            <div class="form_group">
+                <label for="file_name">Waqiya Paragraph</label>
+                <div class="input para_parent">
+                    <input type="text" name="file_name" id="file_name">
+                </div>
+            </div>
+            <button class="add_para">+</button>
+            <button class="remove">-</button>
+    
+            <div class="form_group">
+                <textarea name="generated_code" id="mycode" rows="15"></textarea>
+            </div>
+    
+            <input type="submit" value="Copy Code">
+    
+        </form>
+
+<div class="waqiyat_section_code" style="display: none;">
+
+    <a href="#personality" id="personality">Personality 1</a>
+    <div class="personality_pg">
+        <div class="personality_img"><img src="img/renowed/image.png" alt="image_personality"></div>
+        <h1>Personality 1</h1>
+        <div class="pers_pg_close">X</div>
+        <p></p>
+    </div>
+
+</div>
+    
+</body>
+</html>

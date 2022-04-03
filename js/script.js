@@ -1,13 +1,15 @@
 // targetting the elements
-let image_name = document.querySelector("#image_name")
 let book_name = document.querySelector("#book_title")
+let image_name = document.querySelector("#image_name")
+let address = document.querySelector("#location")
 let file_name = document.querySelectorAll(".para_parent input")
 let copy_btn = document.querySelector("input[type='submit']")
 let waqiyat_section_code = document.querySelector(".waqiyat_section_code")
 
 // running the function while inputing in the input
-image_name.addEventListener('input', myfunction)
 book_name.addEventListener('input', myfunction)
+image_name.addEventListener('input', myfunction)
+address.addEventListener('input', myfunction)
 file_name[0].addEventListener('input', myfunction)
 
 /* in the function below, targetting the values of the targetted elements and putting the code text in the value of textarea */
@@ -20,9 +22,11 @@ function myfunction() {
 
     // generated code inside elements
     let personality_image = document.querySelector(".personality_img img")
+    let personality_location = document.querySelector(".personality_pg address")
     let waqiya_heading = document.querySelector("#personality")
     let waqiya_heading2 = document.querySelector(".personality_pg h1")
     personality_image.src = `img/renowed/${image_name.value}`
+    personality_location.innerHTML = address.value
     waqiya_heading.innerHTML = book_name.value
     waqiya_heading2.innerHTML = book_name.value
     // for paragraph

@@ -1,9 +1,9 @@
 // targetting the elements
+let form = document.getElementById("form")
 let book_name = document.querySelector("#book_title")
 let image_name = document.querySelector("#image_name")
 let address = document.querySelector("#location")
 let file_name = document.querySelectorAll(".para_parent input")
-let copy_btn = document.querySelector("input[type='submit']")
 let waqiyat_section_code = document.querySelector(".waqiyat_section_code")
 
 // running the function while inputing in the input
@@ -23,7 +23,7 @@ function myfunction() {
     // generated code inside elements
     let personality_image = document.querySelector(".personality_img img")
     let personality_location = document.querySelector(".personality_pg address")
-    let waqiya_heading = document.querySelector("#personality")
+    let waqiya_heading = document.querySelector(".personality")
     let waqiya_heading2 = document.querySelector(".personality_pg h1")
     personality_image.src = `img/renowed/${image_name.value}`
     personality_location.innerHTML = address.value
@@ -79,7 +79,7 @@ function remove_input_and_p() {
 
 
 /* copieng the value inside the textarea using the copy_btn */
-copy_btn.addEventListener('click', function(e){
+  form.addEventListener('submit', function(e){
     e.preventDefault()
     copy_the_code()
   })
